@@ -17,7 +17,6 @@ const AssetPage: React.FC = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [form] = Form.useForm();
 
-  // Fetch assets from the backend
   const fetchAssets = async () => {
     try {
       const response = await axios.get('http://localhost:3000/assets');
@@ -31,12 +30,11 @@ const AssetPage: React.FC = () => {
     fetchAssets();
   }, []);
 
-  // Handle form submission to add a new asset
   const handleAddAsset = async (values: Asset) => {
     try {
       await axios.post('http://localhost:3000/assets', values);
       message.success('Asset added successfully!');
-      fetchAssets(); // Refresh the list after adding
+      fetchAssets(); 
       setIsModalVisible(false);
       form.resetFields();
     } catch (error) {
