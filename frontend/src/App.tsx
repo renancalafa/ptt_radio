@@ -12,7 +12,8 @@ const App: React.FC = () => (
     <Layout style={{ minHeight: '100vh' }}>
       <Layout className="site-layout">
         <Header className="site-layout-background" style={{ padding: 0 }}>
-          <h1>PTT Radio Management System</h1>
+          {/* <h1>PTT Radio Management System</h1> */}
+          PTT Radio Management System
         </Header>
         <SideMenu>
         </SideMenu>
